@@ -1,0 +1,555 @@
+/* ===== 基础重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #f2f2f2;
+}
+
+body {
+  font: 95.3% arial, sans-serif;
+  line-height: 1.4;
+  color: #1e1e1e;
+}
+
+a {
+  text-decoration: none;
+  color: #005cd4;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.out {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+/* ===== 顶部黄色 ===== */
+#top {
+  border-top: 6px solid #f1c40f;
+  background: linear-gradient(145deg, #fef9e0, #fcee9e);
+  padding: 0.2em 0 1.2em 0;
+}
+
+header {
+  padding: 0.5em 0 0.2em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chromium-logo {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="%234074cc"/><circle cx="50" cy="50" r="36" fill="%23f1c40f"/><circle cx="50" cy="50" r="28" fill="%23ffffff"/><path d="M50 22 L50 78 M22 50 L78 50 M28 28 L72 72 M28 72 L72 28" stroke="%23333" stroke-width="2"/></svg>') no-repeat center;
+  background-size: cover;
+  margin-right: 0.6em;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #1e1e1e;
+  letter-spacing: -0.5px;
+}
+
+.title small {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+/* ===== 导航 ===== */
+nav {
+  background: #2c3e50;
+  padding: 0.4rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 2px;
+  align-items: center;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  color: #fff;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+
+.nav a:hover {
+  background: #1a2632;
+  text-decoration: none;
+}
+
+.nav .sub {
+  display: none;
+  position: absolute;
+  background: #2c3e50;
+  min-width: 160px;
+  padding: 4px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav li:hover .sub {
+  display: block;
+}
+
+.sub li {
+  display: block;
+}
+
+.sub a {
+  display: block;
+  padding: 0.3rem 1rem;
+  white-space: nowrap;
+}
+
+/* ===== 双栏布局 ===== */
+#main {
+  width: 70%;
+  float: left;
+  padding-right: 2%;
+}
+
+aside {
+  width: 28%;
+  float: right;
+}
+
+#content {
+  padding: 1.5em 0;
+  overflow: auto;
+}
+
+/* ===== 卡片 ===== */
+.chromium,
+.news,
+.info,
+ul.item li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin: 0.6rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #4074cc;
+}
+
+.news {
+  border-left-color: #f39c12;
+}
+
+.info {
+  border-left-color: #7f8c8d;
+  background: #f8f9fa;
+}
+
+ul.item li {
+  border-left-color: #95a5a6;
+  padding: 0.6rem 1rem;
+}
+
+.chromium {
+  border-left-color: #2ecc71;
+}
+
+.chromium.stable {
+  border-left-color: #27ae60;
+}
+
+.chromium.dev {
+  border-left-color: #3498db;
+}
+
+.chromium.canary {
+  border-left-color: #f1c40f;
+}
+
+.chromium.official {
+  border-left-color: #e67e22;
+}
+
+.chromium.archived {
+  border-left-color: #999;
+  background: #f5f5f5;
+  opacity: 0.7;
+}
+
+/* ===== 标签 ===== */
+.tags {
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.st {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.st.blue {
+  background: #0486bc;
+}
+.st.green {
+  background: #03a226;
+}
+.st.violet {
+  background: #8e44ad;
+}
+.st.yellow {
+  background: #d4a017;
+}
+.st.grey {
+  background: #7f8c8d;
+}
+.st.red {
+  background: #c0392b;
+}
+.st.orange {
+  background: #e67e22;
+}
+.st.admin {
+  background: #2c3e50;
+  width: 100%;
+  text-align: center;
+}
+.st.snapshot {
+  background: #6c5ce7;
+}
+
+/* ===== 杂项 ===== */
+h2 {
+  font-size: 1.7rem;
+  border-bottom: 2px solid #ddd;
+  margin: 0.8em 0 0.3em;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0.8em 0 0.2em;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin: 0.4em 0;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.stable {
+  background: #27ae60;
+}
+.dev {
+  background: #3498db;
+}
+.canary {
+  background: #f1c40f;
+}
+.official {
+  background: #e67e22;
+}
+
+/* ===== 代码块样式（新增） ===== */
+.code-block {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  margin: 0.3rem 0;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.code-block .cmd {
+  color: #4ec9b0;
+  white-space: nowrap;
+  font-family: 'Courier New', monospace;
+}
+
+.code-block .copy-btn {
+  flex-shrink: 0;
+  background: #3a3a3a;
+  color: #ccc;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: arial, sans-serif;
+  transition: background 0.2s;
+}
+
+.code-block .copy-btn:hover {
+  background: #555;
+  color: #fff;
+}
+
+.code-block .copy-btn.copied {
+  background: #27ae60;
+  color: #fff;
+}
+
+/* ===== 内联代码 ===== */
+code {
+  background: #ecf0f1;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+}
+
+footer {
+  margin-top: 2rem;
+  border-top: 3px solid #f1c40f;
+  padding: 1.2rem 0;
+  color: #555;
+}
+
+.in {
+  padding-top: 1.5em;
+  clear: both;
+}
+
+ul.disc {
+  padding-left: 2em;
+  list-style: disc outside;
+}
+
+details {
+  display: block;
+  margin-top: 0.4em;
+}
+
+summary {
+  cursor: pointer;
+  outline: 0;
+  display: block;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary:before {
+  content: "► ";
+  opacity: 0.3;
+  font-size: smaller;
+}
+
+details[open]>summary:before {
+  content: "▼ ";
+}
+
+/* ===== 新增组件 ===== */
+
+/* 版本号只读显示 */
+.browser-version-display {
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1e1e1e;
+}
+
+/* 仓库地址链接样式 */
+.repo-link {
+  font-size: 0.85rem;
+  color: #555;
+}
+.repo-link a {
+  color: #005cd4;
+  text-decoration: none;
+}
+.repo-link a:hover {
+  text-decoration: underline;
+}
+
+/* 下载按钮 */
+.download-btn {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 4px 16px;
+  background: #4074cc;
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.download-btn:hover {
+  background: #26539d;
+  text-decoration: none;
+}
+
+/* 侧边栏说明卡片 */
+.sidebar-note {
+  background: #ffffff;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 780px) {
+  #main,
+  aside {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .nav a {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .tags {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .chromium,
+  .news,
+  .info,
+  ul.item li {
+    padding: 0.8rem;
+  }
+
+  .code-block {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .code-block .cmd {
+    white-space: normal;
+    word-break: break-all;
+  }
+}
+
+@media print {
+  nav,
+  #totop {
+    display: none;
+  }
+
+  .chromium {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}
+
+/* ===== 工具 ===== */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ===== 发行版标签 ===== */
+.distro-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0.6rem 0 0.2rem 0;
+  padding-left: 2px;
+}
+
+/* ===== 源码仓库折叠 ===== */
+.repo-details {
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.repo-summary {
+  cursor: pointer;
+  color: #005cd4;
+  font-size: 0.9rem;
+  font-weight: normal;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: #f0f4fa;
+  user-select: none;
+}
+
+.repo-summary:hover {
+  background: #e3e9f2;
+  text-decoration: none;
+}
+
+.repo-summary::marker {
+  display: none;
+}
+
+.repo-summary:before {
+  content: "▶ ";
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.repo-details[open] .repo-summary:before {
+  content: "▼ ";
+}
+
+.repo-details .repo-link {
+  margin-top: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
