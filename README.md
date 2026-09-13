@@ -1,1 +1,1 @@
-## 下载chromium专用
+## 请转到gh-pages分支
